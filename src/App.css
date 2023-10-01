@@ -1,3 +1,57 @@
-:root{
-  
+:root {
+  /* Colors */
+
+  /* Dark Mode */
+
+  --dark-mode-dark-blue: hsl(209, 23%, 22%);
+  --dark-mode-very-dark-blue: hsl(207, 26%, 17%);
+
+  /* Light Mode */
+
+  --light-mode-very-dark-blue: hsl(200, 15%, 8%);
+  --light-mode-dark-gray: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+
+  --white: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --medium: 300;
+  --bold: 600;
+  --bolder: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
