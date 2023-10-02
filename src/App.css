@@ -11,12 +11,6 @@
   --bolder: 800;
 }
 
-[data-theme="dark"] {
-  --background: hsl(207, 26%, 17%);
-  --light-background: hsl(209, 23%, 22%);
-  --text: hsl(0, 0%, 100%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +55,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
+body.dark {
+  --background: hsl(207, 26%, 17%);
+  --light-background: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+}
+
 ::placeholder {
   color: var(--text);
   font-size: 0.875rem;
@@ -70,7 +70,7 @@ h6 {
   /* padding: 0 5rem; */
 }
 
-.inputs{
+.inputs {
   display: flex;
   align-items: center;
   justify-content: space-between;

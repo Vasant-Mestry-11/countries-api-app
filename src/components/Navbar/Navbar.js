@@ -6,30 +6,28 @@ import {
 } from "../../constants/global";
 import "./Navbar.css";
 import "../../App.css";
+import useTheme from "../../hooks/useTheme";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [theme, handleTheme] = useTheme();
 
-  const themeContent = isDark ? (
-    <>
-      <i className="bx bx-sun"></i>
-      <p>{LIGHT_MODE}</p>
-    </>
-  ) : (
-    <>
-      <i className="bx bx-moon"></i>
-      <p>{DARK_MODE}</p>
-    </>
-  );
-
-  const handleThemes = () => {
-    setIsDark((prevTheme) => !prevTheme);
-  };
+  const themeContent =
+    theme === "dark" ? (
+      <>
+        <i className="bx bx-sun"></i>
+        <p>{LIGHT_MODE}</p>
+      </>
+    ) : (
+      <>
+        <i className="bx bx-moon"></i>
+        <p>{DARK_MODE}</p>
+      </>
+    );
 
   return (
     <nav className="container navbar">
       <h1>{WHERE_IN_THE_WORLD}</h1>
-      <div className="themes" onClick={handleThemes}>
+      <div className="themes" onClick={handleTheme}>
         {themeContent}
       </div>
     </nav>
