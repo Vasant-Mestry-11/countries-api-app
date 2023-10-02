@@ -23,7 +23,8 @@
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   height: 100%;
   margin: 0px;
 }
@@ -58,6 +59,36 @@ h6 {
   overflow-wrap: break-word;
 }
 
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+::placeholder{
+  color: var(--text);
+}
+
 .container {
   /* padding: 0 5rem; */
+}
+
+.input-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--light-background);
+  padding: 1rem;
+  width: 40%;
+}
+
+.search-icon {
+  font-size: 3rem;
+  color: var(--text);
+}
+
+.input {
+  background-color: var(--light-background);
+  color: var(--text);
+  width: 100%;
 }

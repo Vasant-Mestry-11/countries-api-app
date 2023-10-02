@@ -5,19 +5,19 @@ import {
   WHERE_IN_THE_WORLD,
 } from "../../constants/global";
 import "./Navbar.css";
-import '../../App.css'
+import "../../App.css";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
 
   const themeContent = isDark ? (
     <>
-      <i class="bx bx-sun"></i>
+      <i className="bx bx-sun"></i>
       <p>{LIGHT_MODE}</p>
     </>
   ) : (
     <>
-      <i class="bx bx-moon"></i>
+      <i className="bx bx-moon"></i>
       <p>{DARK_MODE}</p>
     </>
   );
