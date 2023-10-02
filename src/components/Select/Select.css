@@ -1,0 +1,12 @@
+.select{
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--light-background);
+  color: var(--text);
+}
+
+.option{
+  font-size: 1.2rem;
+}
