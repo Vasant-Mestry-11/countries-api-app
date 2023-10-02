@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { switchTheme } from "../utils/themes";
 
 const useTheme = () => {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme"));
 
   useEffect(() => {
     handleTheme()
