@@ -1,0 +1,15 @@
+.navbar {
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-background);
+  color: var(--text);
+}
+
+.themes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
