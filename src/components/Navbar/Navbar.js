@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   DARK_MODE,
   LIGHT_MODE,
@@ -25,7 +24,7 @@ const Navbar = () => {
     );
 
   return (
-    <nav className="container navbar">
+    <nav className="navbar">
       <h1>{WHERE_IN_THE_WORLD}</h1>
       <div className="themes" onClick={handleTheme}>
         {themeContent}
