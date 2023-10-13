@@ -1,8 +1,8 @@
 :root {
   /* Colors */
 
-  --background: hsl(0, 0%, 100%);
-  --light-background: hsl(0, 0%, 98%);
+  --background: hsl(0, 0%, 96%);
+  --light-background: hsl(0, 0%, 100%);
   --text: hsl(200, 15%, 8%);
 
   /* Font Weights */
