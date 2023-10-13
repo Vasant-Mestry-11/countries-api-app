@@ -27,6 +27,21 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-background);
+  width: 0.5rem;
+  border-radius: 0.313rem;
+}
+
+::-webkit-scrollbar:hover {
+  filter: brightness(30%);
+}
+
 input,
 button,
 select,
