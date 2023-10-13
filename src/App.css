@@ -55,6 +55,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
+img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
 body.dark {
   --background: hsl(207, 26%, 17%);
   --light-background: hsl(209, 23%, 22%);
@@ -91,4 +97,13 @@ body.dark {
   background-color: var(--light-background);
   color: var(--text);
   width: 100%;
+}
+
+.countries {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 3rem;
+  overflow: hidden;
 }

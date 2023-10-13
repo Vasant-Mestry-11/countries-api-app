@@ -29,3 +29,7 @@ export const REGIONS = [
     label: "Oceania",
   },
 ];
+
+export const POPULATION = "Population";
+export const REGION = "Region";
+export const CAPITAL = "Capital";

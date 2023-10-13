@@ -1,0 +1,37 @@
+.card {
+  width: 18rem;
+  height: 20rem;
+  object-fit: cover;
+  background-color: var(--light-background);
+  border-radius: 0.313rem;
+  overflow: hidden;
+}
+
+.card__img {
+  height: 10rem;
+}
+
+.card__content {
+  padding: 1rem;
+}
+
+.card__heading {
+  font-size: 1.5rem;
+}
+
+.card__subheading {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.card__subheading p > .card__keys {
+  font-weight: 600;
+}
+
+.card__subheading p > .card__values {
+  font-weight: 300;
+}

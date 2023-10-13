@@ -2,8 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
-import { FILTER_BY_REGION, REGIONS, SEARCH_PLACEHOLDER } from "./constants/global";
+import {
+  FILTER_BY_REGION,
+  REGIONS,
+  SEARCH_PLACEHOLDER,
+} from "./constants/global";
 import Select from "./components/Select/Select";
+import { ALL_COUNTRIES } from "./constants/data";
+import Card from "./components/Card/Card";
 
 function App() {
   const [input, setInput] = useState("");
@@ -39,6 +45,12 @@ function App() {
               onChange={handleRegionChange}
             />
           </div>
+        </div>
+
+        <div className="countries">
+          {ALL_COUNTRIES.map((country, idx) => {
+            return <Card country={country} key={idx} />;
+          })}
         </div>
       </Main>
     </div>
