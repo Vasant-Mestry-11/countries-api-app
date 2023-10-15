@@ -9,6 +9,8 @@
   --medium: 300;
   --bold: 600;
   --bolder: 800;
+
+  --card-width: 18rem;
 }
 
 * {
@@ -108,6 +110,11 @@ body.dark {
   color: var(--text);
 }
 
+.close-icon {
+  cursor: pointer;
+  color: var(--text);
+}
+
 .input {
   background-color: var(--light-background);
   color: var(--text);
@@ -115,30 +122,32 @@ body.dark {
 }
 
 .countries {
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  justify-items: center;
   margin-top: 2rem;
   gap: 3rem;
   overflow: hidden;
 }
 
-
 @media (max-width: 450px) {
-  .inputs{
+  .inputs {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .input-wrapper{
+  .input-wrapper {
     width: 100%;
   }
 
-  .select{
+  .select {
     width: 100%;
   }
 
-  .select option{
+  .select option {
     width: 60%;
     border: 1px solid red;
   }

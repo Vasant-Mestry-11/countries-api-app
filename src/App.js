@@ -27,6 +27,10 @@ function App() {
     setSelectedRegion(event.target.value);
   };
 
+  const handleInputClear = () => {
+    setInput("");
+  };
+
   return (
     <div style={{ height: "100vh" }}>
       <Navbar />
@@ -41,6 +45,12 @@ function App() {
                 onChange={handleInputChange}
                 placeholder={SEARCH_PLACEHOLDER}
               />
+              {input && (
+                <i
+                  className="bx bx-x close-icon"
+                  onClick={handleInputClear}
+                ></i>
+              )}
             </div>
             <Select
               options={REGIONS}

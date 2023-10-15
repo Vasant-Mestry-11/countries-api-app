@@ -1,5 +1,5 @@
 .card {
-  width: 18rem;
+  width: var(--card-width);
   height: fit-content;
   object-fit: cover;
   background-color: var(--light-background);
