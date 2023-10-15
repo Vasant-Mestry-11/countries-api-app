@@ -6,7 +6,6 @@ const useFilteration = (entires, inputValue, selectedRegion) => {
   const regionBased =
     selectedRegion &&
     filteredEntries.filter((c) => c.region === selectedRegion);
-  console.log(filteredEntries);
 
   return { filteredEntries: selectedRegion ? regionBased : filteredEntries };
 };
