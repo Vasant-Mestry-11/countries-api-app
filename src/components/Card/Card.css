@@ -1,10 +1,10 @@
 .card {
   width: 18rem;
-  height: 20rem;
+  height: fit-content;
   object-fit: cover;
   background-color: var(--light-background);
   border-radius: 0.313rem;
-  overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 .card__img {

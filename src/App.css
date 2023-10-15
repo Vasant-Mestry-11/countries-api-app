@@ -116,7 +116,7 @@ body.dark {
 
 .countries {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 2rem;
   gap: 3rem;

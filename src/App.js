@@ -14,17 +14,50 @@ import Card from "./components/Card/Card";
 function App() {
   const [input, setInput] = useState("");
   const [filteredRegion, setFilteredRegion] = useState("");
+  const [countries] = useState(ALL_COUNTRIES);
+  const [filteredData, setFilteredData] = useState([]);
+
+  const filteration = (type, value) => {
+    const temp = [...countries];
+    const result = temp.filter(({ name }) =>
+      name.trim().toLowerCase().includes(value.trim().toLowerCase())
+    );
+    return result;
+  };
+
+  // const checkCriteria = (type, value) => {
+  //   switch (type) {
+  //     case "search":
+  //       return filteration("search", value);
+  //     case "filter":
+  //       return filteration("filter", value);
+  //     case "both":
+  //       return filteration("both");
+  //     default:
+  //       return;
+  //   }
+  // };
 
   const handleInputChange = (event) => {
     setInput(event.target.value);
+    const res = filteration("input", event.target.value);
+    setFilteredData(res);
   };
 
   const handleRegionChange = (event) => {
     setFilteredRegion(event.target.value);
+    filteration("filter", event.target.value);
   };
 
+  const shouldShowFilteredValue =
+    input && filteredData.length > 0
+      ? filteredData
+      : input && filteredData.length === 0
+      ? false
+      : countries;
+
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <Navbar />
       <Main>
         <div className="main-content-wrapper">
@@ -48,9 +81,11 @@ function App() {
         </div>
 
         <div className="countries">
-          {ALL_COUNTRIES.map((country, idx) => {
-            return <Card country={country} key={idx} />;
-          })}
+          {shouldShowFilteredValue
+            ? shouldShowFilteredValue.map((country, idx) => {
+                return <Card country={country} key={idx} />;
+              })
+            : "Countries not found"}
         </div>
       </Main>
     </div>

@@ -3,4 +3,5 @@
   color: var(--text);
   padding: 1rem 5rem;
   padding-top: 3rem;
+  min-height: 100vh;
 }
