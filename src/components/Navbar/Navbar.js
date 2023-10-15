@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1>{WHERE_IN_THE_WORLD}</h1>
+      <h1 className="title">{WHERE_IN_THE_WORLD}</h1>
       <div className="themes" onClick={handleTheme}>
         {themeContent}
       </div>

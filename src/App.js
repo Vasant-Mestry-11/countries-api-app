@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100%" }}>
       <Navbar />
       <Main>
         <div className="main-content-wrapper">
