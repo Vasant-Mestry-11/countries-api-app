@@ -122,3 +122,24 @@ body.dark {
   gap: 3rem;
   overflow: hidden;
 }
+
+
+@media (max-width: 450px) {
+  .inputs{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .input-wrapper{
+    width: 100%;
+  }
+
+  .select{
+    width: 100%;
+  }
+
+  .select option{
+    width: 60%;
+    border: 1px solid red;
+  }
+}

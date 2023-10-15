@@ -1,4 +1,4 @@
-.select{
+.select {
   border: none;
   outline: none;
   padding: 1rem;
@@ -7,6 +7,16 @@
   color: var(--text);
 }
 
-.option{
+.option {
   font-size: 1.2rem;
+}
+
+@media (max-width: 450px) {
+  .select {
+    width: 100%;
+  }
+
+  .option {
+    font-size: 0.75rem;
+  }
 }

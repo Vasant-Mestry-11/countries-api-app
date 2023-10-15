@@ -10,51 +10,22 @@ import {
 import Select from "./components/Select/Select";
 import { ALL_COUNTRIES } from "./constants/data";
 import Card from "./components/Card/Card";
+import useFilteration from "./hooks/useFilteration";
 
 function App() {
   const [input, setInput] = useState("");
-  const [filteredRegion, setFilteredRegion] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
   const [countries] = useState(ALL_COUNTRIES);
-  const [filteredData, setFilteredData] = useState([]);
 
-  const filteration = (type, value) => {
-    const temp = [...countries];
-    const result = temp.filter(({ name }) =>
-      name.trim().toLowerCase().includes(value.trim().toLowerCase())
-    );
-    return result;
-  };
-
-  // const checkCriteria = (type, value) => {
-  //   switch (type) {
-  //     case "search":
-  //       return filteration("search", value);
-  //     case "filter":
-  //       return filteration("filter", value);
-  //     case "both":
-  //       return filteration("both");
-  //     default:
-  //       return;
-  //   }
-  // };
+  const { filteredEntries } = useFilteration(countries, input, selectedRegion);
 
   const handleInputChange = (event) => {
     setInput(event.target.value);
-    const res = filteration("input", event.target.value);
-    setFilteredData(res);
   };
 
   const handleRegionChange = (event) => {
-    setFilteredRegion(event.target.value);
-    filteration("filter", event.target.value);
+    setSelectedRegion(event.target.value);
   };
-
-  const shouldShowFilteredValue =
-    input && filteredData.length > 0
-      ? filteredData
-      : input && filteredData.length === 0
-      ? false
-      : countries;
 
   return (
     <div style={{ height: "100vh" }}>
@@ -74,15 +45,15 @@ function App() {
             <Select
               options={REGIONS}
               placeholder={FILTER_BY_REGION}
-              selected={filteredRegion}
+              selected={selectedRegion}
               onChange={handleRegionChange}
             />
           </div>
         </div>
 
         <div className="countries">
-          {shouldShowFilteredValue
-            ? shouldShowFilteredValue.map((country, idx) => {
+          {filteredEntries.length > 0
+            ? filteredEntries.map((country, idx) => {
                 return <Card country={country} key={idx} />;
               })
             : "Countries not found"}
