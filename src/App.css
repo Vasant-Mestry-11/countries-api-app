@@ -136,19 +136,10 @@ body.dark {
 @media (max-width: 768px) {
   .inputs {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .input-wrapper {
     width: 100%;
-  }
-
-  .select {
-    width: 100%;
-  }
-
-  .select option {
-    width: 60%;
-    border: 1px solid red;
   }
 }
