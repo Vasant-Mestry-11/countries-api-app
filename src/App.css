@@ -133,7 +133,7 @@ body.dark {
   overflow: hidden;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .inputs {
     flex-direction: column;
     gap: 2rem;

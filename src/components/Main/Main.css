@@ -5,3 +5,11 @@
   padding-top: 3rem;
   min-height: 100vh;
 }
+
+
+
+@media (max-width: 450px){
+  .main{
+    padding: 1rem;
+  }
+}
